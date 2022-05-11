@@ -1,0 +1,57 @@
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+div.content {
+  font-family: "Lora";
+  color: green;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "content1";
+  height: 480px;
+  overflow:hidden;
+}
+
+section.section1 {
+  grid-area: content1;
+}
+
+section.section1 img {
+  width: 100%;
+  object-fit: cover;
+}
+
+section.section2 {
+  grid-area: content1;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media screen and (min-width: 480px) {
+  div.content {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "content1 content2";
+    gap: 30px;
+  }
+  section.section2 {
+    grid-area: content2;
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section.section2 {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  section.section2 {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  
+}
